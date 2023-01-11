@@ -1,3 +1,1 @@
-This project is a website that serves as a trading platform. Some functions include display all items, delete an item, and update an item detail.
-
-This project is part of the assignments of ITIS 5166.
+BJ Trading is a web application that allows user create accounts and items for trading. After creating account and items, user is able to mark the item on watch list or trade items with other users.
