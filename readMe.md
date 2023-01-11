@@ -23,3 +23,6 @@ BJ Trading is a web application that allows user create accounts and items for t
 - Install Mongo DB
 - Run **npm install**
 - Run **nodemon app** to start the server
+
+# Example Files
+- In example files folder, there are two json files for user accounts and items to trade and one user credential file for log in. 
