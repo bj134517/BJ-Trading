@@ -1,0 +1,133 @@
+[{
+  "_id": {
+    "$oid": "63984593ba2c6e5a7a2bddb2"
+  },
+  "title": "League of Legends",
+  "category": "MOBA",
+  "status": "Available",
+  "content": "At the first Game Developers Choice Awards in 2010, the game won four major awards: Best Online Technology, Game Design, New Online Game, and Visual Arts.",
+  "author": {
+    "$oid": "637db6640e496253a726e0fd"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670923667562"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670923667562"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "639845cdba2c6e5a7a2bddb8"
+  },
+  "title": "Brawl Stars",
+  "category": "MOBA",
+  "status": "Available",
+  "content": "The game was nominated for &quot;Mobile Game&quot; and &quot;EE Mobile Game of the Year&quot; at the 15th British Academy Games Awards.",
+  "author": {
+    "$oid": "637db6640e496253a726e0fd"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670923725723"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670923725723"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63984613ba2c6e5a7a2bddbb"
+  },
+  "title": "DOTA 2",
+  "category": "MOBA",
+  "status": "Available",
+  "content": "Following its reveal in 2011, Dota 2 won IGN&#x27;s People&#x27;s Choice Award.",
+  "author": {
+    "$oid": "637db6640e496253a726e0fd"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670923795405"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670923795405"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "639846a2ba2c6e5a7a2bddc8"
+  },
+  "title": "God of War",
+  "category": "Action",
+  "status": "Available",
+  "content": "God of War is an action-adventure game franchise created by David Jaffe at Sony&#x27;s Santa Monica Studio.",
+  "author": {
+    "$oid": "637dbecc3ac5f235c932cc0d"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670923938688"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670923938688"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "639846cdba2c6e5a7a2bddcb"
+  },
+  "title": "Devil May Cry 5",
+  "category": "Action",
+  "status": "Available",
+  "content": "Devil May Cry 5 received positive reviews from critics, praising the variety of techniques the three characters bring while also liking the handling of the narrative.",
+  "author": {
+    "$oid": "637dbecc3ac5f235c932cc0d"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670923981273"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670923981273"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63984703ba2c6e5a7a2bddce"
+  },
+  "title": "Doom Eternal",
+  "category": "Action",
+  "status": "Available",
+  "content": "Doom Eternal received five nominations at The Game Awards for 2020, including Game of the Year and Best Action Game.",
+  "author": {
+    "$oid": "637dbecc3ac5f235c932cc0d"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670924035931"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670924035931"
+    }
+  },
+  "__v": 0
+}]
