@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home Page</title>
+  <link rel="stylesheet" href="/css/indexstyle.css">
+</head>
+<body>
+  <!-- <div id="header_container">
+    <a href="/"><img src="/images/logo.png" alt="Logo" width="200" height="200"></a>
+    <a href="/trades/new"><h3 id="start_trade">Start Trade</h3></a> 
+    <a><h3 id="sign_in">Sign In</h3></a>
+    <a><h3 id="sign_up">Sign Up</h3></a>
+    <a><h3 id="sign_out">Sign Out</h3></a>
+    <a><h3 id="profile">Profile</h3></a>
+    <hr>
+    <a href="/trades"> <h3 id="general_navigation">Trade</h3></a>
+  </div> -->
+
+  <nav>
+    <h2><img src="/images/logo.png" alt="Logo" width="200" height="100" onclick="window.location.href='http://localhost:3000/'"></h2>
+    <hr>
+    <a href='/'>Home</a>
+    <a href='/trades'>Trade</a>
+    <a href='/trades/new'>Start Trade</a>
+
+    <%if (!user) {%>
+        <a href='/users/signin'>Sign In</a>
+        <a href='/users/new'>Sign Up</a>
+    <%} else {%>
+        <a href='/users/profile'>Profile</a>
+        <a href='/users/signout'>Sign Out</a>
+    <%}%> 
+  </nav>
+</nav>
+
+  <% if(errorMessages.length > 0) {%>
+    <% errorMessages.forEach(message=>{%>   
+      <h3 style="color:red; text-align:center;"><%=message%></h3>
+    <%});%>
+  <%}%>
+
+  <% if(successMessages.length > 0) {%>
+    <% successMessages.forEach(message=>{%>
+        <h3 style="color:green; text-align:center;"><%=message%></h3>
+    <%});%>
+  <%}%>

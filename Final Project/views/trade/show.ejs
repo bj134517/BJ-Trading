@@ -1,0 +1,29 @@
+<%- include('../partials/header.ejs') %>
+    <div class = "content">
+        <img src="/images/legend_of_zelda.webp" alt="Legend of Zelda" width="150" height="200">
+        <h4><%= trade.title %></h4>
+        <small>Posted <%= trade.createdAt.toLocaleString()%> by <%= trade.author.firstName + ' ' + trade.author.lastName%></small>
+        <div id ="trade"><%= trade.content %></div>
+        <br/>
+        <%if (user == trade.author._id) {%>
+            <form>
+                <button type="submit" formmethod="GET" formaction="/trades/<%= trade.id %>/edit">Edit</button>
+                <button type="submit" formmethod="POST" formaction="/trades/<%= trade.id %>?_method=DELETE">Delete</button>
+            </form>
+        <%} else {%>
+            <form>
+                <% if (!watched){ %>
+                    <button type="submit" formmethod="GET" formaction="/trades/<%= trade.id %>/watch">Watch</button>
+                <% } else { %>
+                    <button type="submit" formmethod="GET" formaction="/trades/<%= trade.id %>/unwatch">Unwatch</button>
+                <% } %>
+                <% if (trade.status == "Available") { %>
+                    <button type="submit" formmethod="GET" formaction="/trades/<%= trade.id %>/trade">Trade</button>
+                <% } else {%>
+                    <i>The item is in process of trading</i>
+                <% } %> 
+            </form>
+ 
+        <%}%>
+    </div>
+<%- include('../partials/footer.ejs') %>

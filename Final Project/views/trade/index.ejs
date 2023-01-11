@@ -1,0 +1,18 @@
+<%- include('../partials/header.ejs') %>
+    <div class = "content">
+        <%if (result.length) {%>
+            <h3>Select a game</h1>
+            <%result.forEach(trade => {%>
+                <b><p><%= trade.category %></p></b>
+
+                <% trade.records.forEach(b => { %>
+                        <a href="/trades/<%= b.id%>"><p><%= b.title  %></p></a>
+                <% }) %>
+                
+            <%} ); %>
+        <%} else {%>
+            <p>There are no items to display.</p>
+        <%}%>
+        
+    </div>
+<%- include('../partials/footer.ejs') %>

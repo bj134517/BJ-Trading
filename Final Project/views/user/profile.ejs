@@ -1,0 +1,62 @@
+
+<%- include('../partials/header.ejs')%>
+<div class = "content">
+    <h2>Welcome, <%=user.firstName%></h2>
+    <%if (trades.length) {%>
+        <p>You have created the following trades</p>
+        <% if (makeTrade) { %>
+            <h4>Please select a item to trade</h4>
+        <% } %>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Status</th>
+                <th>Option</th>
+              </tr>
+        <%trades.forEach(trade => {%>
+
+                <tr>
+                    <th><a href = '/trades/<%=trade.id%>'><p><%=trade.title%></p> </a> </th>
+
+                    <th><p><%=trade.status%></p></th>
+
+                    <th>
+                        <% if (makeTrade) { %>
+                            <a href = '/trades/<%=trade.id%>/makeTrade'><p>Trade</p></a>
+                        <%} else if (trade.status == "Awaiting") { %> 
+                            <form>
+                                <button type="submit" formmethod="GET" formaction="/trades/<%= trade.id %>/accept">Accept</button>
+                                <button type="submit" formmethod="GET" formaction="/trades/<%= trade.id %>/reject">Reject</button>
+                            </form>
+                            
+                        <%} else if (trade.status == "Pending") {%>
+                            <form>
+                                <button type="submit" formmethod="GET" formaction="/trades/<%= trade.id %>/cancel">Cancel</button>
+                            </form>
+                        <% } %>
+                    </th>
+                </tr>
+
+        <%});%>
+        </table>
+    <%} else {%>
+        <p>You have not created any trades</p>
+    <%}%>
+
+    <%if (author.length) {%>
+        <p>You have watched the following games</p>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Option</th>
+            </tr>
+        <% author.forEach(watched => {%>
+            <tr>
+                <th><%=watched.itemTitle%></th>
+                <th><a href="/trades/<%= watched.itemId %>/unwatch"><p>Unwatch</p></a></th>
+            </tr>
+        <%})%>
+        </table>
+    <%}%>
+</div>
+    <%- include('../partials/footer.ejs')%>
